@@ -49,7 +49,8 @@ COPY --from=assets /app/public/build /app/public/build
 RUN php artisan ziggy:generate || true
 
 # Otimizações do Laravel
-RUN php artisan config:cache || true \
+RUN Composer dump-autoload || true \
+ && php artisan config:cache || true \
  && php artisan route:cache || true \
  && php artisan view:cache || true
 
