@@ -67,9 +67,11 @@
             "@php artisan test"
         ]
     },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
+   "extra": {
+    "laravel": {
+        "dont-discover": [
+            "laravel/pail"
+        ]
         }
     },
     "config": {
