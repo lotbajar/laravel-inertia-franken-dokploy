@@ -50,7 +50,6 @@ RUN php artisan ziggy:generate || true
 
 # Otimizações do Laravel
 RUN Composer dump-autoload || true \
- && php artisan config:cache || true \
  && php artisan route:cache || true \
  && php artisan view:cache || true
 
